@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Escreva um programa que solicite ao usuário dois valores booleanos (True ou False) e armazene-os em variáveis. Em seguida,aplique os operadores lógicos "and", "or" e "not" entre essas variáveis e imprima os resultados.</P>
+            <div class="input-group">
+                <p>digite Suas informações</p>
+                <input placeholder="Digite True ou False" type="text" name="b_1" id="b_1">
+                <input placeholder="Digite True ou False" type="text" name="b_2" id="b_2">
+            </div>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="Enviar" onclick="verificar()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function verificar(){
+            let b1 = document.getElementById("b_1").value.toLowerCase() === 'true'
+            let b2 = document.getElementById("b_2").value.toLowerCase() === 'true'
+            let andResult = b1 && b2
+            let orResult = b1 || b2
+            let notB1 = !b1
+            let notB2 = !b2
+            let mensagem = `${b1} AND ${b2} = ${andResult}<br>${b1} OR ${b2} = ${orResult}<br>NOT ${b1} = ${notB1}<br>NOT ${b2} = ${notB2}`
+            document.getElementById("main").innerHTML = `<h1>${mensagem}</h1>`
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

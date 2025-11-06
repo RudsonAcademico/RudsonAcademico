@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Escreva um programa que solicite ao usuário dois números inteiros e armazene-os em variáveis. Em seguida, calcule e imprima a soma, subtração, multiplicação e divisão desses números.</P>
+            <div class="input-group">
+                <p>digite Suas informações</p>
+                <input placeholder="Digite o primeiro número" type="text" name="p_num" id="p_num">
+                <input placeholder="Digite o segundo número" type="text" name="s_num" id="s_num">
+            </div>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="Enviar" onclick="calcular()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function calcular(){
+            let pNum = parseInt(document.getElementById("p_num").value)
+            let sNum = parseInt(document.getElementById("s_num").value)
+
+            let soma = pNum + sNum
+            let subtracao = pNum - sNum
+            let multiplicacao = pNum * sNum
+            if (sNum === 0) {
+                var divisao = "Indefinida (divisão por zero)";
+            } else {
+                var divisao = pNum / sNum;
+            }
+
+            let mensagem = `Soma: ${soma} \nSubtração: ${subtracao} \nMultiplicação: ${multiplicacao} \nDivisão: ${divisao}`
+
+            document.getElementById("main").innerHTML = `<h1>${mensagem}</h1>`
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

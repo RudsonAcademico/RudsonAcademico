@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Escreva um programa que solicite ao usuário dois números e verifique se o primeiro número é maior que o segundo. Imprima uma mensagem informando o resultado da comparação.</P>
+            <div class="input-group">
+                <p>digite Suas informações</p>
+                <input placeholder="Primeiro numero" type="number" name="b_1" id="b_1">
+                <input placeholder="Segundo numero" type="number" name="b_2" id="b_2">
+            </div>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="Enviar" onclick="verificar()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function verificar(){
+            let b1 = parseFloat(document.getElementById("b_1").value)
+            let b2 = parseFloat(document.getElementById("b_2").value)
+            if (b1 > b2){
+                mensagem = `O número ${b1} é maior que ${b2}.`
+            } else if (b1 < b2){
+                mensagem = `O número ${b1} é menor que ${b2}.`
+            } else {
+                mensagem = `Os números são iguais.`
+            }
+            document.getElementById("main").innerHTML = `<h1>${mensagem}</h1>`
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

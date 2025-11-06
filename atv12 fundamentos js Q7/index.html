@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Escreva um programa que solicite ao usuário o seu salário mensal e o número de meses trabalhados no ano. Calcule e imprima o salário anual.</P>
+            <div class="input-group">
+                <p>digite Suas informações</p>
+                <input placeholder="Seu Salario mensal" type="text" name="s_mensal" id="s_mensal">
+                <input placeholder="Meses trabalhados" type="text" name="meses" id="meses">
+            </div>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="Enviar" onclick="calcular()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function calcular(){
+            let sMensal = parseFloat(document.getElementById("s_mensal").value)
+            let meses = parseInt(document.getElementById("meses").value)
+            let sAnual = sMensal * meses
+            let mensagem = `Salário Anual: R$ ${sAnual.toFixed(2)}`
+            document.getElementById("main").innerHTML = `<h1>${mensagem}</h1>`
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

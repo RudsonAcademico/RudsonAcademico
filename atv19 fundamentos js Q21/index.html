@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Escreva um programa que solicite ao usuário um número inteiro positivo e imprima todos os números ímpares de 1 até esse número.</P>
+            <div class="input-group">
+                <p>digite Suas informações</p>
+                <input placeholder="Digite um numero" type="number" name="num" id="num">
+            </div>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="Enviar" onclick="verificar()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function verificar(){
+            let num = parseInt(document.getElementById("num").value)
+            let mensagem = `Números ímpares de 1 até ${num}:<br>`
+            for (let i = 1; i <= num; i++){
+                if (i % 2 !== 0){
+                    mensagem += `${i}<br>`
+                }
+            }
+            document.getElementById("main").innerHTML = `<h1>${mensagem}</h1>`
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

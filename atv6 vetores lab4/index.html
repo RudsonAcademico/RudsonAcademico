@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Lab 1</P>
+            <div>
+                <p>dgite um valor</p>
+                <input type="text" name="valor" id="valor">
+            </div>
+            
+            <p>selecione uma opção</p>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="push" onclick="f_push()">
+                <input class="btn-primary" type="submit" value="unshift" onclick="f_unshift()">
+                <input class="btn-primary" type="submit" value="shift" onclick="f_shift()">
+                <input class="btn-primary" type="submit" value="pop" onclick="f_pop()">
+            </div>
+            
+            <p>meu array</p>
+            <div class="lista" id="lista">
+            </div>
+
+            <p>selecione uma operação para transformar o array</p>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="dobrarNumeros" onclick="dobrarNumeros()">
+                <input class="btn-primary" type="submit" value="filtrarMaioresQueDois" onclick="filtrarMaioresQueDois()">
+                <input class="btn-primary" type="submit" value="encontrarPrimeiroMaiorQueDois" onclick="encontrarPrimeiroMaiorQueDois()">
+                <input class="btn-primary" type="submit" value="somarElementos" onclick="somarElementos()">
+                <input class="btn-primary" type="submit" value="adicionarUm" onclick="adicionarUm()">
+                <input class="btn-primary" type="submit" value="criarObjetos" onclick="criarObjetos()">
+                <input class="btn-primary" type="submit" value="logarPares" onclick="logarPares()">
+            </div>
+        </form>
+    </div>
+    <script>
+        let lista = []
+        
+        // Funções de manipulação do array do lab1
+        function f_push(){
+            let valor = parseInt(document.getElementById("valor").value)
+            console.log(typeof(valor))
+            lista.push(valor)
+        }
+        function f_unshift(){
+            let valor = parseInt(document.getElementById("valor").value)
+            lista.unshift(valor)
+        }
+        function f_shift(){
+            let valor = parseInt(document.getElementById("valor").value)
+            lista.shift(valor)
+        }
+        function f_pop(){
+            let valor = parseInt(document.getElementById("valor").value)
+            lista.pop(valor)
+        }
+
+
+        // Funções de manipulação do array da atv6
+
+        function dobrarNumeros(){
+            for (let i = 0; i < lista.length; i++){
+                lista[i] = lista[i] * 2
+            }
+        }
+
+        function filtrarMaioresQueDois(){
+            let newLista = []
+            for (let i = 0; i < lista.length; i++){
+                if (lista[i] > 2){
+                    newLista[newLista.length] = lista[i]
+                }
+            }
+            lista = newLista
+        }
+
+        function encontrarPrimeiroMaiorQueDois(){
+            for (let i = 0; i < lista.length; i++){
+                if (lista[i] > 2){
+                    lista = [lista[i]]
+                    break
+                }
+            }
+        }
+
+        function somarElementos(){
+            for (let i = 1; i < lista.length; i++){
+                lista[0] = Number(lista[0]) + Number(lista[i])
+            }
+            lista.length = 1
+        }
+
+        function criarObjetos(){
+            let newLista = []
+            for (let i = 0; i < lista.length; i++){
+                let nome = lista[i]
+                let obj = {nome: lista[i]}
+                newLista[newLista.length] = obj
+            }
+            lista = newLista
+        }   
+
+        function adicionarUm(){
+            for (let i = 0; i < lista.length; i++){
+                lista[i] = Number(lista[i]) + 1
+            }
+        }
+        
+
+
+        function logarPares(){
+            for (let i = 0; i < lista.length; i++){
+                if (lista[i] % 2 == 0){
+                    console.log(lista[i])
+                }
+            }
+        }
+
+        
+        document.getElementById("meuForm").addEventListener("submit", function (e){
+            e.preventDefault()
+            
+            let valor = document.getElementById("valor").value
+
+            document.getElementById("lista").innerHTML = " "
+
+            for (let i = 0; i < lista.length; i++){
+                
+                document.getElementById("lista").innerHTML += `<div class="itens-lista"><p>${lista[i]}</p></div>`
+            }
+        })
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Escreva um programa que solicite ao usuário o seu nome e a sua idade, armazenando esses valores em variáveis. Em seguida, remova o formulário e escreva uma mensagem de boas vindas, mostrando o nome e a idade do usuário.</P>
+            <div class="input-group">
+                <p>digite Suas informações</p>
+                <input placeholder="Digite seu nome" type="text" name="nome" id="nome">
+                <input placeholder="Digite sua idade" type="text" name="idade" id="idade">
+            </div>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="Enviar" onclick="saudar()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function saudar(){
+            let nome = document.getElementById("nome").value
+            let idade = document.getElementById("idade").value
+
+            let mensagem = `Seja bem vindo ${nome}, sua idade é ${idade} anos!`
+
+            document.getElementById("main").innerHTML = `<h1>${mensagem}</h1>`
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

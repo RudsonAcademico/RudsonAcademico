@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Escreva um programa que solicite ao usuário uma temperatura em graus Celsius e converta-a para Fahrenheit. Imprima o resultado formatado.</P>
+            <div class="input-group">
+                <p>digite Suas informações</p>
+                <input placeholder="Digite a temperatura em Celsius" type="text" name="graus_c" id="graus_c">
+            </div>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="Enviar" onclick="calcular()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function calcular(){
+            let grausC = parseFloat(document.getElementById("graus_c").value)
+            let grausF = (grausC * 9/5) + 32
+            let mensagem = `Temperatura em Fahrenheit: ${grausF.toFixed(2)} °F`
+            document.getElementById("main").innerHTML = `<h1>${mensagem}</h1>`
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Escreva um programa que solicite ao usuário um ano e verifique se é um ano bissexto. Imprima uma mensagem informando o resultado.</P>
+            <div class="input-group">
+                <p>digite Suas informações</p>
+                <input placeholder="Digite um ano" type="number" name="ano" id="ano">
+            </div>
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="Enviar" onclick="verificar()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function verificar(){
+            let ano = parseInt(document.getElementById("ano").value)
+            if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)){
+                mensagem = `O ano ${ano} é bissexto.`
+            } else {
+                mensagem = `O ano ${ano} não é bissexto.`
+            }
+            document.getElementById("main").innerHTML = `<h1>${mensagem}</h1>`
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>

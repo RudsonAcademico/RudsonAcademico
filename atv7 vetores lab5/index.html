@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Lab 1</P>
+            <div class="input-group">
+                <input placeholder="dgite um valor" type="text" name="valor" id="valor">
+                <input class="btn-primary" type="submit" value="push" onclick="f_push()">
+            </div>
+            
+            <div class="input-group">
+                <input type="text" name="busca" id="busca">
+                <input class="btn-primary" type="submit" value="Pesquisa" onclick="p_sequencial()">
+                <input class="btn-primary" type="submit" value="Pesquisa Binaria" onclick="p_binaria()">
+            </div>
+
+            <div class="buttons">
+                <input class="btn-primary" type="submit" value="sort" onclick="f_sort()">
+            </div>
+            
+            <p>Dados do Array</p>
+            <div class="lista" id="lista">
+            </div>
+
+            <p id="mensagem"></p>
+        </form>
+    </div>
+    <script>
+        let lista = []
+        
+        function f_push(){
+            let valorInput = document.getElementById("valor")
+            let valor = parseInt(valorInput.value)
+            console.log(typeof(valor))
+            lista.push(valor)
+        }
+
+        function f_sort(){
+            lista.sort((a, b) => a - b)
+        }
+
+        function p_sequencial(){
+            let buscaInput = document.getElementById("busca")
+            let buscaValor = parseInt(buscaInput.value)
+            let encontrado = false
+            let contador = 0
+
+            for (let i = 0; i < lista.length; i++){
+                contador++
+                if (lista[i] === buscaValor){
+                    encontrado = true
+                    break
+                }
+            }
+
+            let mensagem = document.getElementById("mensagem")
+            if (encontrado){
+                mensagem.innerText = `Valor encontrado apos ${contador} iterações.`
+            } else {
+                mensagem.innerText = `O valor ${buscaValor} não foi encontrado no array.`
+            }
+        }
+
+        function p_binaria(){
+            console.log("Pesquisa binaria")
+            let buscaValor = parseInt(document.getElementById("busca").value)
+            let inicio = 0
+            let fim = lista.length - 1
+            let encontrado = false
+            let contador = 0
+
+            while (inicio <= fim){
+                let meio = Math.floor((inicio + fim) / 2)
+                contador++
+                if (lista[meio] === buscaValor){
+                    encontrado = true
+                    break
+                } else if (lista[meio] < buscaValor){
+                    inicio = meio + 1
+                } else {
+                    fim = meio - 1
+                }
+                console.log(contador)
+            }
+
+            let mensagem = document.getElementById("mensagem")
+            if (encontrado){
+                mensagem.innerText = `Valor encontrado apos ${contador} iterações.`
+            } else {
+                mensagem.innerText = `O valor ${buscaValor} não foi encontrado no array.`
+            }
+        }
+        
+        document.getElementById("meuForm").addEventListener("submit", function (e){
+            e.preventDefault()
+
+            let valorInput = document.getElementById("valor").value
+
+            document.getElementById("lista").innerHTML = " "
+
+            for (let i = 0; i < lista.length; i++){
+                
+                document.getElementById("lista").innerHTML += `<div class="itens-lista"><p>${lista[i]}</p></div>`
+            }
+        })
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</body>
+</html>
