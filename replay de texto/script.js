@@ -17,8 +17,6 @@ async function replayText() {
         } else if (replay[j] === ' ') {
             j++
             document.getElementById('output').innerText += ` ${replay[j]}`
-        } else if (replay[j] === 'Control' || replay[j] === 'Shift' || replay[j] === 'Alt' || replay[j] === 'Meta' || replay[j] === 'CapsLock' || replay[j] === 'Tab' || replay[j] === 'Escape' || replay[j] === 'ArrowUp' || replay[j] === 'ArrowDown' || replay[j] === 'ArrowLeft' || replay[j] === 'ArrowRight' || replay[j] === 'Delete' || replay[j] === 'Home' || replay[j] === 'End' || replay[j] === 'PageUp' || replay[j] === 'PageDown' || replay[j] === 'Dead' ) {
-            continue
         } else if (replay[j] === 'Enter') {
             document.getElementById('output').innerText += '\n'
         } else {
