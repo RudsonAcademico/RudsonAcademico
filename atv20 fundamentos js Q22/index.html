@@ -21,7 +21,7 @@
     </div>
     <script>
         function verificar(){
-            let texto = document.getElementById("texto").value
+            let texto = document.getElementById("texto").value.toLowerCase()
             let palidromo = texto.split('').reverse().join('') == texto
             if (palidromo){
                 mensagem = `A string "${texto}" é um palíndromo.`
