@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    gap: 10px;
 }
 
 .meu-form {

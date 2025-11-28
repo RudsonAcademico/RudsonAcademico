@@ -27,12 +27,16 @@ async function replayText() {
     }
 }
 
+document.getElementById('area').addEventListener('keypress', (event) => {
+    const keyPressName = event.key
+    console.log(keyPressName)
+    push(keyPressName)
+})
+
 document.getElementById('area').addEventListener('keydown', (event) => {
-    const keyName = event.key
-    if (keyName === 'Control' || keyName === 'Shift' || keyName === 'Alt' || keyName === 'Meta') {
-        return
-    } else {
-        push(keyName)
+    const keyDownName = event.key
+    if (keyDownName === 'Backspace') {
+        push(keyDownName)
     }
 })
 
@@ -41,3 +45,12 @@ document.getElementById('form-area').addEventListener('submit', function (e){
     replayText()
 })
 
+document.getElementById('limpar').addEventListener('submit', function (e){
+    e.preventDefault()
+    while (!isEmpty()) {
+        pop()
+        replay.pop()
+        console.log("passou")
+    }
+    document.getElementById('output').innerText = ''
+})
