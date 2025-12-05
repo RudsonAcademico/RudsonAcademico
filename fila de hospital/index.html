@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fila Hospital</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <form class="form-card" id="meuForm" action="" method="get">
+            <P>Formulario do Paciente</P>
+            <div>
+                <p>Digite o Nome do Paciente</p>
+                <input type="text" name="paciente" id="paciente">
+                <p>digite o valor da prioridade entre 1 a 4, onde 4 é a maior prioridade e 1 a menor</p>
+                <input type="text" name="prioridade" id="prioridade">
+            </div>
+            
+            <p>selecione uma opção</p>
+            <div class="buttons">
+                <input class="btn-primary" type="button" value="enqueue" onclick="f_enqueue()">
+                <input class="btn-primary" type="button" value="dequeue" onclick="f_dequeue()">
+            </div>
+
+            <p>Fila</p>
+            <div class="lista" id="lista">
+
+            </div>
+        </form>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
