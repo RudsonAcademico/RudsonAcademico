@@ -1,0 +1,132 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 50vw;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
+}
+
+.form-card {
+    background-color: #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60vw;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.divisao {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.divisao div {
+    width: 50%;
+}
+
+label {
+    display: block;
+    color: #4a5568;
+}
+
+input {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    appearance: none;
+    border: 1px solid #cbd5e1;
+    border-radius: 2%;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    color: #4a5568;
+    line-height: 1.25;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15); 
+    border-color: #60a5fa;
+}
+
+form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn-primary {
+    background-color: #3b82f6; 
+    width: auto;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color .15s ease, box-shadow .15s ease;
+}
+
+.btn-delete {
+    background-color: #ff1919; 
+    width: auto;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color .15s ease, box-shadow .15s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1e40af;
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
+}
+
+.lista{
+    display: flex;
+    gap: 1vh;
+    width: 100%;
+    height: auto;
+    min-height: 7vh;
+    background-color: #0369a1;
+    border-radius: 5px;
+    padding: 1vh;
+    align-items: center;
+}
+
+.contato-lista {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    height: auto;
+    background-color: #93c5fd;
+    border-radius: 5px;
+    gap: 1vh;
+    font-size: 12px;
+}
