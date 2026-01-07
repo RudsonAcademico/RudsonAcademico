@@ -20,12 +20,6 @@ Sou **Estudante de Sistemas Para Internet** 💻 e gosto de explorar diferentes 
 
 ---
 
-## 📫 Como me encontrar
-
-Se quiser falar comigo ou ver mais sobre o que faço, me segue aqui no GitHub ou entra em contato pelo LinkedIn [Rúdson Alisson](www.linkedin.com/in/rúdson-alisson-de-medeiros-silva-4177402b8)
-
----
-
 ## 💬 Curiosidade
 
 🧠 “Programar é transformar café e noite mal dormidas em código funcional ☕💻”
