@@ -1,16 +1,35 @@
-## Hi there 👋
+# 👋 Olá, eu sou o Rúdson Alisson!
 
-<!--
-**RudsonAcademico/RudsonAcademico** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Sou **Estudante de Sistemas Para Internet** 💻 e gosto de explorar diferentes áreas da programação — sempre buscando aprender mais e criar coisas legais. Aqui você encontrará projetos de estudo, experimentos, desafios e um pouco da minha jornada no mundo dev!
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🚀 Sobre mim
+
+- 🎓 Estudante de Sistemas Para Internet  
+- 💡 Sempre aprendendo e experimentando novas tecnologias  
+- 🔭 Atualmente estudando e construindo projetos para ampliar minhas habilidades
+
+---
+
+## 🛠️ Tecnologias que estou usando
+
+- JavaScript  
+- HTML/CSS  
+- Python
+
+---
+
+## 📫 Como me encontrar
+
+Se quiser falar comigo ou ver mais sobre o que faço, me segue aqui no GitHub ou entra em contato pelo LinkedIn www.linkedin.com/in/rúdson-alisson-de-medeiros-silva-4177402b8
+
+---
+
+## 💬 Curiosidade
+
+🧠 “Programar é transformar café e noite mal dormidas em código funcional ☕💻”
+
+---
+
+Obrigado pela visita! 😊  
