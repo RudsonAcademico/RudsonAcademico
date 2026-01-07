@@ -22,7 +22,7 @@ Sou **Estudante de Sistemas Para Internet** 💻 e gosto de explorar diferentes 
 
 ## 💬 Curiosidade
 
-🧠 “Programar é transformar café e noite mal dormidas em código funcional ☕💻”
+🧠 “Programar é transformar café e noites mal dormidas em código funcional ☕💻”
 
 ---
 
